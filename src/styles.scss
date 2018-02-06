@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+a{
+    color: $white !important;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $white;
+}
+
+html, body{
+    height: 100vh;
+}
+
+body{
+    background-image: url('assets/images/background.png');
+    background-size: inherit;
+}
+
+.active{
+    background-color: rgba(255, 255, 255, 0.33);
+}

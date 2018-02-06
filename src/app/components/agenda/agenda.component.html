@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="d-flex justify-content-center day-selection mb-3">
+    <div (click)="show = true" class="day-one" [class.active]="show">
+      <strong>20.01.2018</strong>
+    </div>
+    <div (click)="show = false;" class="day-two" [class.active]="!show">
+      <strong>21.01.2018</strong>
+    </div>
+  </div>
+  <ng-template [ngIf]="show">
+    <div class="d-flex justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <table class="table table-inverse">
+          <tbody>
+            <tr>
+              <th scope="row">10:00</th>
+              <td>Registration</td>
+            </tr>
+            <tr>
+              <th scope="row">10:30</th>
+              <td>Introduction</td>
+            </tr>
+            <tr>
+              <th scope="row">11:15</th>
+              <td>Team up!</td>
+            </tr>
+            <tr>
+              <th scope="row">11:25</th>
+              <td>Topic</td>
+            </tr>
+            <tr>
+              <th scope="row">12:00</th>
+              <td>Start Hacking</td>
+            </tr>
+            <tr>
+              <th scope="row">14:00</th>
+              <td>Snacks</td>
+            </tr>
+            <tr>
+              <th scope="row">19:00</th>
+              <td>Dinner</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="!show">
+    <div class="d-flex justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <table class="table table-inverse">
+          <tbody>
+            <tr>
+              <th scope="row">8:00</th>
+              <td>Breackfast</td>
+            </tr>
+            <tr>
+              <th scope="row">12:30</th>
+              <td>Lunch</td>
+            </tr>
+            <tr>
+              <th scope="row">15:00</th>
+              <td>Presentations</td>
+            </tr>
+            <tr>
+              <th scope="row">16:30</th>
+              <td>Closing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,50 @@
+<div class="container vote-wrapper">
+  <div class="d-flex justify-content-center">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" [(ngModel)]="email" name="email" class=" form-control form-control-sm " id="exampleInputEmail1" aria-describedby="emailHelp "
+          placeholder="Enter email ">
+        <small id="emailHelp " class="form-text text-muted ">Note: You only can vote once for each team</small>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex justify-content-center ">
+    <select class="form-control form-control-sm " [(ngModel)]="selectedId " style="width: 50%; ">
+      <option selected disabled value="-1 ">Select a team</option>
+      <option *ngFor="let team of teams " [value]="team.id ">{{team.name}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="teams[selectedId -1 ] !== undefined" class="d-flex justify-content-center pt-2">
+    <p>{{teams[selectedId -1 ].description}}</p>
+  </div>
+
+  <div class="row no-gutters mt-2 mb-1">
+    <label for="exampleInputEmail1 " style="padding-top: 4px; " class="col-12 col-md-3">Presentation</label>
+    <input type="range" min="0 " max="10" step="1" [(ngModel)]="value1 " class="col-11 col-md-8" />
+    <label style="padding-top: 4px; " class="col-1 display-value">{{value1}}</label>
+  </div>
+
+  <div class="row no-gutters mt-1 mb-1">
+    <label for="exampleInputEmail1 " style="padding-top: 4px; " class="col-12 col-md-3">Creativity</label>
+    <input type="range" min="0 " max="10" step="1" [(ngModel)]="value2 " class="col-11 col-md-8" />
+    <label style="padding-top: 4px; " class="col-1 display-value">{{value2}}</label>
+  </div>
+
+  <div class="row no-gutters mt-1 mb-2">
+    <label for="exampleInputEmail1 " style="padding-top: 4px; " class="col-12 col-md-3">Buzzwords</label>
+    <input type="range" min="0 " max="10" step="1" [(ngModel)]="value3 " class="col-11 col-md-8" />
+    <label style="padding-top: 4px; " class="col-1 display-value">{{value3}}</label>
+  </div>
+
+  <button type="button " class="btn btn-sm btn-secondary " (click)="vote() ">Vote
+    <ng-template [ngIf]="isLoading ">
+      <i class="fa fa-circle-o-notch fa-spin fa-fw "></i>
+    </ng-template>
+  </button>
+
+  <p class="error-message mt-2 mb-2" [style.visibility]="error.length>0?visible:hidden">{{error}}</p>
+  <p class="success-message mt-2 mb-2" [style.visibility]="success.length>0?visible:hidden">{{success}}</p>
+
+</div>

@@ -1,0 +1,30 @@
+@import 'variables';
+
+.day-selection{
+    div{
+        border: 1px solid $white;   
+        padding: 3px;
+        padding-left: 6px;
+        padding-right: 6px;
+        cursor: pointer;    
+    }
+
+    .day-one{
+        border-top-left-radius: 0.25em;
+        border-bottom-left-radius: 0.25em;       
+    }
+
+    .day-two{
+        border-top-right-radius: 0.25em;
+        border-bottom-right-radius: 0.25em;
+   }
+
+   .agenda-content{
+       div{
+           div{
+            text-align: center;
+
+           }
+       }
+   }
+}

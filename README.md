@@ -1,6 +1,8 @@
 # CreativeHackFrontend
 
+This is the website for the Hackathon voting system at [Creative Hack 2017](https://www.facebook.com/events/102111023904622/).
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
 
 ## Development server
 

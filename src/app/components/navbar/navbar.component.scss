@@ -1,0 +1,15 @@
+@import 'variables';
+
+.navbar{
+    background-color: $transparent;
+}
+
+.navbar-light .navbar-toggler {
+    color: $white;
+    border-color: $white;
+    cursor: pointer;
+
+    &:focus{
+        outline: none;
+    }
+}
